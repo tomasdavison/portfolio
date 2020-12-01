@@ -72,7 +72,7 @@ module.exports = {
 		'no-spaced-func': ['error'],
 		'no-trailing-spaces': ['error'],
 		'no-unreachable': ['error'],
-		'no-unused-vars': ['error'],
+		'no-unused-vars': ['warn'],
 		'no-useless-concat': ['error'],
 		'no-useless-constructor': ['error'],
 		'no-useless-return': ['error'],
