@@ -9,18 +9,19 @@ const TitleDiv = styled.div`
 	top: 50vh;
 	transition: all 0.5s ease-out;
 	width: 100%;
-
-	&:hover{
-		top:47vh;
-	}
 `;
 
 const App = () => (
 	<>
-		{/* <TitleDiv>
+		<TitleDiv>
 			<Title text="Hi, I'm Tomas."/>
-		</TitleDiv> */}
-		<Button/>
+			<Button
+				width="30vw"
+				height="5vh"
+			>
+				contact me!
+			</Button>
+		</TitleDiv>
 	</>
 );
 
