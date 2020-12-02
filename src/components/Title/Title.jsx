@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 const Word = styled.span`
 	color: white;
 	font-size: 5vw;
+	font-weight: bold;
 
 	& span {
 		animation: none;
