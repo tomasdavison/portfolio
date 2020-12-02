@@ -1,14 +1,46 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const Text = styled.a`
+const Word = styled.span`
 	color: white;
-	font-size: 3vw;
-	text-shadow: 5px 5px 2px black;
+	font-size: 5vw;
+
+	& span {
+		animation: none;
+		position: relative;
+		transition: color 0.3s;
+		&:hover {
+			animation: move 4s 1 ease-in-out;
+			color: #14E92B;
+		}
+	}
+
+	@keyframes move {
+		0%,20%{
+			top: 0vw;
+		}
+		5% {
+			top: 0.5vw;
+		}
+		10% {
+			top: -0.5vw;
+		}
+		15% {
+			top: 0.3vw;
+		}
+	}
 `;
 
-const Title = ({ text }) => (
-	<Text>{text}</Text>
+const Container = styled.div`
+	margin: 2vw;
+`;
+
+const Title = ({ children }) => (
+	<Container>
+		<Word>
+			{children.split('').map((char) => <span aria-hidden="true">{char}</span>)}
+		</Word>
+	</Container>
 );
 
 export default Title;

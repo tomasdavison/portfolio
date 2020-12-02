@@ -14,7 +14,7 @@ const TitleDiv = styled.div`
 const App = () => (
 	<>
 		<TitleDiv>
-			<Title text="Hi, I'm Tomas."/>
+			<Title>Hi, Im Tomás.</Title>
 			<Button
 				width="30vw"
 				height="5vh"

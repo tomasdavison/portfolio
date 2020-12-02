@@ -53,7 +53,7 @@ module.exports = {
 		'line-comment-position': ['error'],
 		'lines-around-directive': ['error'],
 		'no-alert': ['error'],
-		'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
+		'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
 		'no-duplicate-imports': ['error', { includeExports: true }],
 		'no-else-return': ['error'],
 		'no-implicit-globals': ['error'],
