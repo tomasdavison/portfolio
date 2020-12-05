@@ -17,8 +17,9 @@ const CustomButton = styled.button`
 
 	&:hover{
 		background: #FFF;
-		color: #050B25;
-		cursor: pointer; 
+		color: #000;
+		cursor: pointer;
+		font-weight: bold; 
 	}
 `;
 

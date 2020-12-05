@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import uuid from 'react-uuid';
 
 const Word = styled.span`
 	color: white;
-	font-size: 5vw;
+	font-size: 5vh;
 	font-weight: bold;
-
+	
 	& span {
 		animation: none;
 		position: relative;
@@ -33,13 +34,14 @@ const Word = styled.span`
 `;
 
 const Container = styled.div`
-	margin: 2vw;
+	padding-bottom: 1vh;
+	padding-top: 1vh;
 `;
 
 const Title = ({ children }) => (
 	<Container>
 		<Word>
-			{children.split('').map((char) => <span aria-hidden="true">{char}</span>)}
+			{children.split('').map((char) => <span aria-hidden="true" key={uuid()}>{char}</span>)}
 		</Word>
 	</Container>
 );
