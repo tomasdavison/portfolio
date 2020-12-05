@@ -5,7 +5,6 @@ import Button from './components/Button/Button';
 import Navbar from './components/Navbar/Navbar';
 
 const TitleDiv = styled.div`
-	border: 1px solid red;
 	overflow-x: hidden;
 	position: relative;
 	text-align: center;
