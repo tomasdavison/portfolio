@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const CustomButton = styled.button`
+	background: #000;
 	border: 1px solid white;
 	color: #FFF;
     font-size:  ${(props) => {

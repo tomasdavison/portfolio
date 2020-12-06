@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Title from './components/Title/Title';
 import Button from './components/Button/Button';
-import Navbar from './components/Navbar/Navbar';
 
 const TitleDiv = styled.div`
 	overflow-x: hidden;
@@ -30,11 +29,10 @@ const TitleDiv = styled.div`
 
 const App = () => (
 	<>
-		<Navbar/>
 		<TitleDiv>
 			<Title>Hi, I&apos;m Tomás.</Title>
 			<Button
-				width="80%"
+				width="60%"
 				height="5vh"
 			>
 				contact me!
