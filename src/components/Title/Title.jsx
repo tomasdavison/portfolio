@@ -34,6 +34,7 @@ const Word = styled.span`
 `;
 
 const Container = styled.div`
+	display: block;
 	padding-bottom: 1vh;
 	padding-top: 1vh;
 `;

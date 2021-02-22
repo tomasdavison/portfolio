@@ -5,12 +5,15 @@ import Button from '../../components/Button/Button';
 import { GitHub, Twitter } from '../../utils/MainIcons';
 
 const TitleDiv = styled.div`
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	overflow-x: hidden;
-	position: relative;
-	text-align: center;
-	top: 40vh;
-	transition: all 0.5s ease-out;
-	width: 80vw;
+    position: relative;
+    top: 40vh;
+    transition: all 0.5s ease-out;
+    width: 80vw;
 
 	@media only screen and (min-width: 600px) {
 		left: 3vw;
@@ -31,22 +34,21 @@ const TitleDiv = styled.div`
 const Home = () => (
 	<TitleDiv>
 		<Title>Hi, I&apos;m Tomás.</Title>
-		<a
-			href="https://www.linkedin.com/in/tom%C3%A1s-guido-davison-970876185/"
+		<Button
+			width="60vw"
+			height="5vh"
+			link="https://www.linkedin.com/in/tom%C3%A1s-guido-davison-970876185/"
 		>
-			<Button
-				width="60%"
-				height="5vh"
-			>
                         contact me!
-			</Button>
-		</a>
-		<GitHub
-			link="https://github.com/tomasdavison"
-		/>
-		<Twitter
-			link="https://twitter.com/tomydavison"
-		/>
+		</Button>
+		<div>
+			<GitHub
+				link="https://github.com/tomasdavison"
+			/>
+			<Twitter
+				link="https://twitter.com/tomydavison"
+			/>
+		</div>
 	</TitleDiv>
 );
 

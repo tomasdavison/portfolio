@@ -5,6 +5,7 @@ const CustomButton = styled.button`
 	background: #000;
 	border: 1px solid white;
 	color: #FFF;
+	display: block;
     font-size:  ${(props) => {
 		if (props.height) {
 			return (props.height * 0.5);
@@ -22,20 +23,34 @@ const CustomButton = styled.button`
 		cursor: pointer;
 		font-weight: bold; 
 	}
+
+	@media only screen and (min-width: 600px) {
+		width: 30vw;
+	}
+
+	@media only screen and (min-width: 1024px) {
+		width: 40vw;
+	}
+
+	@media only screen and (min-width: 1440px) {
+		width: 15.5vw;
+	}
 `;
 
 const Button = ({
-	height, width, children,
+	height, width, children, link,
 }) => (
-	<div>
-		<CustomButton
-			type="button"
-			height={height}
-			width={width}
-		>
-			{children}
-		</CustomButton>
-	</div>
+	<>
+		<a href={link}>
+			<CustomButton
+				type="button"
+				height={height}
+				width={width}
+			>
+				{children}
+			</CustomButton>
+		</a>
+	</>
 );
 
 export default Button;
