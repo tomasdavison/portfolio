@@ -95,7 +95,7 @@ module.exports = {
 		'switch-colon-spacing': ['error'],
 		'react/jsx-props-no-spreading': ['error', { custom: 'ignore' }],
 		'react/destructuring-assignment': [1, 'always', { ignoreClassFields: true }],
-		'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.test.jsx', '**/setupTests.js'] }],
+		'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
 	},
 	parser: 'babel-eslint',
 };
