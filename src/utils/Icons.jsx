@@ -38,3 +38,7 @@ export const LinkedIn = ({ link }) => (
 		<Icon className="fab fa-linkedin" />
 	</a>
 );
+
+export const Arrow = () => (
+	<Icon className="fas fa-chevron-up" />
+);

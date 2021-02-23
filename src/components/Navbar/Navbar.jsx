@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
-import { Meteor, Profile, LinkedIn } from '../../utils/Icons';
+import {
+	Meteor, Profile, LinkedIn, Arrow,
+} from '../../utils/Icons';
 import Tooltip from '../Tooltip/Tooltip';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 const Container = styled.div`
     border-top: 1px solid rgba(100, 100, 100, .5);
@@ -61,31 +64,36 @@ const ListElement = styled.li`
     }
 `;
 
-const Navbar = () => (
-	<Container>
-		<UnorderedList>
-			<ListElement>
-				<Tooltip label="home">
-				    <Meteor/>
-				</Tooltip>
-			</ListElement>
-			<ListElement>
-				<Tooltip label="about me">
-					<Profile/>
-				</Tooltip>
-			</ListElement>
-			<ListElement>
-				<Tooltip label="experience">
-					<Profile/>
-				</Tooltip>
-			</ListElement>
-			<ListElement>
-				<Tooltip label="contact me">
-					<LinkedIn link="https://www.linkedin.com/in/tom%C3%A1s-guido-davison-970876185/"/>
-				</Tooltip>
-			</ListElement>
-		</UnorderedList>
-	</Container>
-);
+const Navbar = () => {
+	const [isMobile, setIsMobile] = useState(true);
+
+	return (
+		<Container>
+			<UnorderedList>
+				<ListElement>
+					<Tooltip label="home">
+						<Meteor/>
+					</Tooltip>
+				</ListElement>
+				{
+					isMobile ? (
+						<ListElement>
+							<Arrow/>
+						</ListElement>
+					) : (
+						<ListElement>
+							<Profile/>
+						</ListElement>
+					)
+				}
+
+				<ListElement>
+					<Tooltip label="contact me">
+						<LinkedIn link="https://www.linkedin.com/in/tom%C3%A1s-guido-davison-970876185/"/>
+					</Tooltip>
+				</ListElement>
+			</UnorderedList>
+		</Container>);
+};
 
 export default Navbar;
