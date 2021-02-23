@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Meteor, Profile, LinkedIn } from '../../utils/Icons';
+import Tooltip from '../Tooltip/Tooltip';
 
 const Container = styled.div`
     border-top: 1px solid rgba(100, 100, 100, .5);
@@ -64,16 +65,24 @@ const Navbar = () => (
 	<Container>
 		<UnorderedList>
 			<ListElement>
-				<Meteor/>
+				<Tooltip label="home">
+				    <Meteor/>
+				</Tooltip>
 			</ListElement>
 			<ListElement>
-				<Profile/>
+				<Tooltip label="about me">
+					<Profile/>
+				</Tooltip>
 			</ListElement>
 			<ListElement>
-				<Profile/>
+				<Tooltip label="experience">
+					<Profile/>
+				</Tooltip>
 			</ListElement>
 			<ListElement>
-				<LinkedIn/>
+				<Tooltip label="contact me">
+					<LinkedIn/>
+				</Tooltip>
 			</ListElement>
 		</UnorderedList>
 	</Container>
