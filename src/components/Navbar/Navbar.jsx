@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Profile } from '../../utils/Icons';
+import { Meteor, Profile, LinkedIn } from '../../utils/Icons';
 
 const Container = styled.div`
     border-top: 1px solid rgba(100, 100, 100, .5);
     bottom: 0;
-    height: 3.5rem;
+    height: 3rem;
     position: fixed;
     width: 100%;
     z-index: 10;
@@ -64,7 +64,7 @@ const Navbar = () => (
 	<Container>
 		<UnorderedList>
 			<ListElement>
-				<Profile/>
+				<Meteor/>
 			</ListElement>
 			<ListElement>
 				<Profile/>
@@ -73,7 +73,7 @@ const Navbar = () => (
 				<Profile/>
 			</ListElement>
 			<ListElement>
-				<Profile/>
+				<LinkedIn/>
 			</ListElement>
 		</UnorderedList>
 	</Container>
