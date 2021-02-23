@@ -1,13 +1,23 @@
 import React from 'react';
+import styled from '@emotion/styled';
 
-export const GitHub = () => (
-	<span style={{ color: 'white' }}>
-		<i className="fab fa-github" />
-	</span>
+const Icon = styled.span`
+    color: white;
+    font-size: 2rem;
+`;
+
+export const Profile = ({ link }) => (
+	<a
+		href={link}
+	>
+		<Icon className="fas fa-user" />
+	</a>
 );
 
-export const Home = () => (
-	<span style={{ color: 'white' }}>
-		<i className="fab fa-github" />
-	</span>
+export const Twitter = ({ link }) => (
+	<a
+		href={link}
+	>
+		<Icon className="fab fa-twitter" />
+	</a>
 );

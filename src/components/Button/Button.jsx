@@ -41,7 +41,7 @@ const Button = ({
 	height, width, children, link,
 }) => (
 	<>
-		<a href={link}>
+		<a href={link} style={{ textDecoration: 'none' }}>
 			<CustomButton
 				type="button"
 				height={height}

@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const Icon = styled.span`
-    animation: 3s infinite alternate slidein;
     border-radius: 50px;
     color: white;
     font-size: 2.5rem;
