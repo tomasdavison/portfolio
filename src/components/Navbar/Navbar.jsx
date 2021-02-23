@@ -81,7 +81,7 @@ const Navbar = () => (
 			</ListElement>
 			<ListElement>
 				<Tooltip label="contact me">
-					<LinkedIn/>
+					<LinkedIn link="https://www.linkedin.com/in/tom%C3%A1s-guido-davison-970876185/"/>
 				</Tooltip>
 			</ListElement>
 		</UnorderedList>

@@ -6,10 +6,8 @@ const Container = styled.div`
 	position: relative;
 	
 	&:hover span {
-		opacity: 0;
-
 		@media only screen and (min-width: 1024px) {
-			opacity: 1;
+			display: inline-block;
 		}
 	}
 `;
@@ -18,11 +16,11 @@ const Span = styled.span`
 	background: #4e4e4e;
 	border-radius: 5px;
 	color: white;
+	display: none;
 	font-size: 0.9rem;
 	font-weight: 200;
 	left: 120%;
 	min-width: 100px;
-	opacity: 0;
 	position: absolute;
 	text-align: center;
 	text-transform: lowercase;

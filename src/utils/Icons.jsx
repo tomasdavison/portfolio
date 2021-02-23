@@ -7,6 +7,7 @@ const Icon = styled.span`
 	font-size: 1.5rem;
 	padding: 0.5rem;
 	transition: all 0.5s ease;
+	z-index: 2;
 
 	&:hover {
 		background: #535353;
