@@ -10,7 +10,7 @@ const Container = styled.div`
     flex-direction: ${(props) => (props.isMobile ? 'column' : 'row')};
 	height: calc(100vh - 3rem);
 	justify-content: space-around; 
-	overflow: visible;
+	overflow: scroll;
 	width: 100%;
 	z-index: 0;
 

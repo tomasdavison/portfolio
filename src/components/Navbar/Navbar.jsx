@@ -132,7 +132,7 @@ const Navbar = () => {
 								</SubMenuListElement>
 								<SubMenuListElement>
 									<Link to="/experience-and-skills" style={{ textDecoration: 'none' }}>
-										<SubMenuText>Experience</SubMenuText>
+										<SubMenuText>Experience & Skills</SubMenuText>
 									</Link>
 								</SubMenuListElement>
 								<SubMenuListElement>
