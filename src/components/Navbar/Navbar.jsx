@@ -10,11 +10,12 @@ const Container = styled.div`
     background: black;
     border-top: 1px solid rgba(100, 100, 100, .5);
     bottom: 0;
-    height: ${(props) => (props.isSubMenuVisible ? 'auto' : '3rem')};
+    height: ${(props) => (props.isSubMenuVisible ? '13rem' : '3rem')};
     position: fixed;
     transition: all 0.3s linear;
     width: 100%;
     z-index: 10;
+    
 
 	@media only screen and (min-width: 1024px) {
 		top: 0;
@@ -121,16 +122,13 @@ const Navbar = () => {
 							/>
 							<SubMenuUnorderedList isSubMenuVisible={isSubMenuVisible}>
 								<SubMenuListElement>
-									<SubMenuText>Im a test</SubMenuText>
+									<SubMenuText>Who am I?</SubMenuText>
 								</SubMenuListElement>
 								<SubMenuListElement>
-									<SubMenuText>Im a test</SubMenuText>
+									<SubMenuText>Experience</SubMenuText>
 								</SubMenuListElement>
 								<SubMenuListElement>
-									<SubMenuText>Im a test</SubMenuText>
-								</SubMenuListElement>
-								<SubMenuListElement>
-									<SubMenuText>Im a test</SubMenuText>
+									<SubMenuText>Projects</SubMenuText>
 								</SubMenuListElement>
 							</SubMenuUnorderedList>
 						</ListElement>
