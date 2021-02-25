@@ -14,6 +14,7 @@ const CustomButton = styled.button`
 	}};
 	height:  ${(props) => props.height || '3vw'};
 	letter-spacing: 3px;
+	min-height: 30px;
  	text-transform: lowercase;
  	width:  ${(props) => props.width || '10vw'}; 
 
