@@ -66,11 +66,15 @@ const ListElement = styled.li`
 `;
 
 const Navbar = () => {
-	const [isMobile, setIsMobile] = useState(true);
+	const [isMobile, setIsMobile] = useState(false);
 	const [isSubMenuVisible, setIsSubMenuVisible] = useState(false);
 
 	useEffect(() => {
 		setIsMobile(window.innerWidth < 1024);
+	});
+
+	window.addEventListener('resize', () => {
+	    setIsMobile(window.innerWidth < 1024);
 	});
 
 	return (
