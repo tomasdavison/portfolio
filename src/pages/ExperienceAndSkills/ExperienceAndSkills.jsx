@@ -64,7 +64,7 @@ const ExperienceAndSkills = () => {
 					completed="70%"
 				/>
 				<ProgressBar
-					color="#0c999e"
+					color="#0c9e31"
 					label="React"
 					completed="75%"
 				/>
@@ -76,7 +76,7 @@ const ExperienceAndSkills = () => {
 				<ProgressBar
 					color="#0c999e"
 					label="C/C++"
-					completed="70%"
+					completed="100%"
 				/>
 			</TextContainer>
 			<Title>Test</Title>

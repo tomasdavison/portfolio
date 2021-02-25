@@ -12,7 +12,6 @@ import ExperienceAndSkills from './pages/ExperienceAndSkills/ExperienceAndSkills
 const App = () => (
 	<UserProvider>
 		<BrowserRouter>
-
 			<Navbar/>
 			<Switch>
 				<Route

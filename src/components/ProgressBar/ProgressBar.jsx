@@ -16,19 +16,25 @@ const Container = styled.div`
     content: "";
     filter: brightness(50%);
     height: ${(props) => props.height || '0.3rem'};
-    overflow: visible;
+    overflow: hidden;
     width: 100%;
     z-index: 1;
 
     &:before {
+        animation: fadein 2s;
         background: ${(props) => props.color || 'white'};
         content: "";
         display: block;
         filter: brightness(150%);
         height: 100%;
         position: relative;
-        width: ${(props) => (props.completed ? props.completed : '0')};
+        width: ${(props) => props.completed};
         z-index: 2;
+        
+        @keyframes fadein {
+            0% { left: -100%; }
+            100% { left: 0%; }
+        }
     }
 `;
 
