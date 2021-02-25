@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 import {
 	Meteor, Profile, LinkedIn, Book, Briefcase,
 } from '../../utils/Icons/Icons';
@@ -109,7 +110,9 @@ const Navbar = () => {
 			<UnorderedList isSubMenuVisible={isSubMenuVisible}>
 				<ListElement>
 					<Tooltip label="home">
-						<Meteor/>
+						<Link to="/">
+							<Meteor/>
+						</Link>
 					</Tooltip>
 				</ListElement>
 				{
@@ -122,13 +125,19 @@ const Navbar = () => {
 							/>
 							<SubMenuUnorderedList isSubMenuVisible={isSubMenuVisible}>
 								<SubMenuListElement>
-									<SubMenuText>Who am I?</SubMenuText>
+									<Link to="/who-am-i">
+										<SubMenuText>Who am I?</SubMenuText>
+									</Link>
 								</SubMenuListElement>
 								<SubMenuListElement>
-									<SubMenuText>Experience</SubMenuText>
+									<Link to="/experience">
+										<SubMenuText>Experience</SubMenuText>
+									</Link>
 								</SubMenuListElement>
 								<SubMenuListElement>
-									<SubMenuText>Projects</SubMenuText>
+									<Link to="/projects">
+									    <SubMenuText>Projects</SubMenuText>
+									</Link>
 								</SubMenuListElement>
 							</SubMenuUnorderedList>
 						</ListElement>
@@ -136,17 +145,23 @@ const Navbar = () => {
 						<>
 							<ListElement>
 								<Tooltip label="Who am I?">
-									<Profile/>
+									<Link to="/who-am-i">
+										<Profile/>
+									</Link>
 								</Tooltip>
 							</ListElement>
 							<ListElement>
 								<Tooltip label="Experience">
-									<Book/>
+									<Link to="/experience">
+										<Book/>
+									</Link>
 								</Tooltip>
 							</ListElement>
 							<ListElement>
 								<Tooltip label="Projects">
-									<Briefcase/>
+									<Link to="/projects">
+										<Briefcase/>
+									</Link>
 								</Tooltip>
 							</ListElement>
 						</>
