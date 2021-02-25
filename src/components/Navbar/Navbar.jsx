@@ -9,7 +9,7 @@ const Container = styled.div`
     background: black;
     border-top: 1px solid rgba(100, 100, 100, .5);
     bottom: 0;
-    height: ${(props) => (props.isSubMenuVisible ? '50vh' : '3rem')};
+    height: ${(props) => (props.isSubMenuVisible ? 'auto' : '3rem')};
     position: fixed;
     transition: all 0.3s linear;
     width: 100%;
@@ -39,6 +39,10 @@ const UnorderedList = styled.ul`
 `;
 
 const ListElement = styled.li`
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
     list-style: none;
     padding: 0 1rem;
 
@@ -65,6 +69,27 @@ const ListElement = styled.li`
     }
 `;
 
+const SubMenuUnorderedList = styled.ul`
+    align-items: center;
+    display: ${(props) => (props.isSubMenuVisible ? 'flex' : 'none')};
+    flex-direction: column;
+    justify-content: space-around;
+`;
+
+const SubMenuListElement = styled.ul`
+    border-top: 1px solid rgb(100,100,100,0.3);
+    padding: 1rem;
+    width: 100vw;
+`;
+
+const SubMenuText = styled.p`
+    color: grey;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-align: center;
+    text-transform: uppercase;
+`;
+
 const Navbar = () => {
 	const [isMobile, setIsMobile] = useState(false);
 	const [isSubMenuVisible, setIsSubMenuVisible] = useState(false);
@@ -89,9 +114,24 @@ const Navbar = () => {
 					isMobile ? (
 						<ListElement>
 							<Arrow
+								style={{ display: 'block' }}
 								isSubMenuVisible={isSubMenuVisible}
 								onClick={() => setIsSubMenuVisible(!isSubMenuVisible)}
 							/>
+							<SubMenuUnorderedList isSubMenuVisible={isSubMenuVisible}>
+								<SubMenuListElement>
+									<SubMenuText>Im a test</SubMenuText>
+								</SubMenuListElement>
+								<SubMenuListElement>
+									<SubMenuText>Im a test</SubMenuText>
+								</SubMenuListElement>
+								<SubMenuListElement>
+									<SubMenuText>Im a test</SubMenuText>
+								</SubMenuListElement>
+								<SubMenuListElement>
+									<SubMenuText>Im a test</SubMenuText>
+								</SubMenuListElement>
+							</SubMenuUnorderedList>
 						</ListElement>
 					) : (
 						<ListElement>
