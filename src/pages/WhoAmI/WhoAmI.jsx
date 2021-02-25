@@ -20,6 +20,7 @@ const Container = styled.div`
 		left: 3rem;
         height: 100vh;
         width: calc(100vw - 3rem);
+		overflow: hidden;
 	}
 `;
 
