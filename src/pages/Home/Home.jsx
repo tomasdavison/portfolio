@@ -2,17 +2,16 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Title from '../../components/Title/Title';
 import Button from '../../components/Button/Button';
+import backgroundVideo from '../../assets/4k-space-starfield-background.mp4';
 import { GitHub, Twitter } from '../../utils/Icons/MainIcons';
 
 const Container = styled.div`
-    background: #000;
     height: 100vh;
     width: 100vw;
 `;
 
 const TitleDiv = styled.div`
     align-items: center;
-	background: #000;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -38,8 +37,20 @@ const TitleDiv = styled.div`
 	}
 `;
 
+const Video = styled.video`
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+`;
+
 const Home = () => (
 	<Container>
+		<Video loop autoPlay muted>
+			<source src={backgroundVideo} type="video/mp4"/>
+		</Video>
 		<TitleDiv>
 			<Title>Hi, I&apos;m Tomás.</Title>
 			<Button

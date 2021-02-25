@@ -13,7 +13,7 @@ const Word = styled.span`
 		transition: color 0.3s;
 		&:hover {
 			animation: move 4s 1 ease-in-out;
-			color: #14E92B;
+			color: #f7a800;
 		}
 	}
 
