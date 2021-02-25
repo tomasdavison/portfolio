@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import {
@@ -6,6 +6,7 @@ import {
 } from '../../utils/Icons/Icons';
 import Arrow from '../../utils/Icons/AnimatedIcons';
 import Tooltip from '../Tooltip/Tooltip';
+import { UserContext } from '../../contexts/UserContext';
 
 const Container = styled.div`
     background: black;
@@ -94,7 +95,7 @@ const SubMenuText = styled.p`
 `;
 
 const Navbar = () => {
-	const [isMobile, setIsMobile] = useState(false);
+	const { isMobile, setIsMobile } = useContext(UserContext);
 	const [isSubMenuVisible, setIsSubMenuVisible] = useState(false);
 
 	useEffect(() => {
@@ -125,17 +126,17 @@ const Navbar = () => {
 							/>
 							<SubMenuUnorderedList isSubMenuVisible={isSubMenuVisible}>
 								<SubMenuListElement>
-									<Link to="/who-am-i">
+									<Link to="/who-am-i" style={{ textDecoration: 'none' }}>
 										<SubMenuText>Who am I?</SubMenuText>
 									</Link>
 								</SubMenuListElement>
 								<SubMenuListElement>
-									<Link to="/experience">
+									<Link to="/experience" style={{ textDecoration: 'none' }}>
 										<SubMenuText>Experience</SubMenuText>
 									</Link>
 								</SubMenuListElement>
 								<SubMenuListElement>
-									<Link to="/projects">
+									<Link to="/projects" style={{ textDecoration: 'none' }}>
 									    <SubMenuText>Projects</SubMenuText>
 									</Link>
 								</SubMenuListElement>

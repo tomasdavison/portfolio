@@ -1,9 +1,15 @@
 import React from 'react';
+import styled from '@emotion/styled';
+
+const Container = styled.div`
+	background: black;
+	height: 100vh;
+`;
 
 const WhoAmI = () => (
-	<div>
+	<Container>
             Hi from Who Am I!
-	</div>
+	</Container>
 );
 
 export default WhoAmI;

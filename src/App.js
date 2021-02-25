@@ -7,29 +7,33 @@ import Home from './pages/Home/Home';
 import WhoAmI from './pages/WhoAmI/WhoAmI';
 import Projects from './pages/Projects/Projects';
 import Experience from './pages/Experience/Experience';
+import UserProvider from './contexts/UserContext';
 
 const App = () => (
-	<BrowserRouter>
-		<Navbar/>
-		<Switch>
-			<Route
-				exact path="/"
-				component={Home}
-			/>
-			<Route
-				path="/who-am-i"
-				component={WhoAmI}
-			/>
-			<Route
-				path="/experience"
-				component={Experience}
-			/>
-			<Route
-				path="/projects"
-				component={Projects}
-			/>
-		</Switch>
-	</BrowserRouter>
+	<UserProvider>
+		<BrowserRouter>
+
+			<Navbar/>
+			<Switch>
+				<Route
+					exact path="/"
+					component={Home}
+				/>
+				<Route
+					path="/who-am-i"
+					component={WhoAmI}
+				/>
+				<Route
+					path="/experience"
+					component={Experience}
+				/>
+				<Route
+					path="/projects"
+					component={Projects}
+				/>
+			</Switch>
+		</BrowserRouter>
+	</UserProvider>
 );
 
 export default App;
