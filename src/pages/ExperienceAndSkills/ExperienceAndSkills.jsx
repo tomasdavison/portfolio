@@ -8,14 +8,15 @@ const Container = styled.div`
     background: black;
     bottom: 3rem;
     display: flex;
-    flex-direction: ${(props) => (props.isMobile ? 'column' : 'row')};
-	height: calc(100vh - 3rem);
-	justify-content: space-around; 
+	flex-direction: ${(props) => (props.isMobile ? 'column' : 'row')};
+	height: calc(100vh - 3rem); 
+	justify-content: space-around;
 	overflow: scroll;
 	width: 100%;
 	z-index: 0;
 
 	@media only screen and (min-width: 1024px) {
+		overflow: hidden;
 		position: absolute;
 		bottom: 0;
 		left: 3rem;
@@ -50,26 +51,32 @@ const ExperienceAndSkills = () => {
 				<ProgressBar
 					color="#0c999e"
 					label="HTML"
+					completed="80%"
 				/>
 				<ProgressBar
 					color="#0c999e"
 					label="CSS"
+					completed="80%"
 				/>
 				<ProgressBar
 					color="#0c999e"
 					label="Vanilla JS"
+					completed="70%"
 				/>
 				<ProgressBar
 					color="#0c999e"
 					label="React"
+					completed="75%"
 				/>
 				<ProgressBar
 					color="#0c999e"
 					label="Java"
+					completed="80%"
 				/>
 				<ProgressBar
 					color="#0c999e"
 					label="C/C++"
+					completed="70%"
 				/>
 			</TextContainer>
 			<Title>Test</Title>

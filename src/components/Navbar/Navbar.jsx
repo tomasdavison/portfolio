@@ -152,7 +152,7 @@ const Navbar = () => {
 								</Tooltip>
 							</ListElement>
 							<ListElement>
-								<Tooltip label="Experience">
+								<Tooltip label="Experience & Skills">
 									<Link to="/experience-and-skills">
 										<Book/>
 									</Link>

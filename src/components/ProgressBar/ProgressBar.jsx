@@ -14,8 +14,22 @@ const Container = styled.div`
     background: ${(props) => props.color || 'white'};
     border-radius: 3px;
     content: "";
+    filter: brightness(50%);
     height: ${(props) => props.height || '0.3rem'};
+    overflow: visible;
     width: 100%;
+    z-index: 1;
+
+    &:before {
+        background: ${(props) => props.color || 'white'};
+        content: "";
+        display: block;
+        filter: brightness(150%);
+        height: 100%;
+        position: relative;
+        width: ${(props) => (props.completed ? props.completed : '0')};
+        z-index: 2;
+    }
 `;
 
 const OutsideContainer = styled.div`
@@ -25,7 +39,7 @@ const OutsideContainer = styled.div`
 `;
 
 const ProgressBar = ({
-	height, width, color, label,
+	height, width, color, label, completed,
 }) => (
 	<OutsideContainer>
 		<Label>{label}</Label>
@@ -33,6 +47,7 @@ const ProgressBar = ({
 			width={width}
 			color={color}
 			height={height}
+			completed={completed}
 		/>
 	</OutsideContainer>
 );
