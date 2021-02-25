@@ -44,6 +44,7 @@ const Text = styled.h3`
 	font-family: 'Roboto';
 	font-size: 1.2rem;
 	padding-top: 1rem;
+	text-align: justify;
 	width: 60vw;
 
 	@media only screen and (min-width: 1024px) {

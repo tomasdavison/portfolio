@@ -6,8 +6,8 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import WhoAmI from './pages/WhoAmI/WhoAmI';
 import Projects from './pages/Projects/Projects';
-import Experience from './pages/Experience/Experience';
 import UserProvider from './contexts/UserContext';
+import ExperienceAndSkills from './pages/ExperienceAndSkills/ExperienceAndSkills';
 
 const App = () => (
 	<UserProvider>
@@ -24,8 +24,8 @@ const App = () => (
 					component={WhoAmI}
 				/>
 				<Route
-					path="/experience"
-					component={Experience}
+					path="/experience-and-skills"
+					component={ExperienceAndSkills}
 				/>
 				<Route
 					path="/projects"

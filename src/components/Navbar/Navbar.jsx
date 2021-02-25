@@ -131,7 +131,7 @@ const Navbar = () => {
 									</Link>
 								</SubMenuListElement>
 								<SubMenuListElement>
-									<Link to="/experience" style={{ textDecoration: 'none' }}>
+									<Link to="/experience-and-skills" style={{ textDecoration: 'none' }}>
 										<SubMenuText>Experience</SubMenuText>
 									</Link>
 								</SubMenuListElement>
@@ -153,7 +153,7 @@ const Navbar = () => {
 							</ListElement>
 							<ListElement>
 								<Tooltip label="Experience">
-									<Link to="/experience">
+									<Link to="/experience-and-skills">
 										<Book/>
 									</Link>
 								</Tooltip>
