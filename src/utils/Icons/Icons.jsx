@@ -15,32 +15,22 @@ const Icon = styled.span`
 	}
 `;
 
-export const Profile = ({ link }) => (
-	<a href={link}>
-		<Icon className="fas fa-user" />
-	</a>
+export const Profile = () => (
+	<Icon className="fas fa-user" />
 );
 
-export const Meteor = ({ link }) => (
-	<a href={link}>
-		<Icon className="fas fa-meteor" />
-	</a>
+export const Meteor = () => (
+	<Icon className="fas fa-meteor" />
 );
 
-export const LinkedIn = ({ link }) => (
-	<a href={link}>
-		<Icon className="fab fa-linkedin" />
-	</a>
+export const LinkedIn = () => (
+	<Icon className="fab fa-linkedin" />
 );
 
-export const Book = ({ link }) => (
-	<a href={link}>
-		<Icon className="fas fa-book-open" />
-	</a>
+export const Book = () => (
+	<Icon className="fas fa-book-open" />
 );
 
-export const Briefcase = ({ link }) => (
-	<a href={link}>
-		<Icon className="fas fa-briefcase" />
-	</a>
+export const Briefcase = () => (
+	<Icon className="fas fa-briefcase" />
 );
