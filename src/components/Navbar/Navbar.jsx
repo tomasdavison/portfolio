@@ -4,13 +4,14 @@ import {
 	Meteor, Profile, LinkedIn, Arrow,
 } from '../../utils/Icons';
 import Tooltip from '../Tooltip/Tooltip';
-import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 const Container = styled.div`
+    background: black;
     border-top: 1px solid rgba(100, 100, 100, .5);
     bottom: 0;
-    height: 3rem;
+    height: ${(props) => (props.isSubMenuVisible ? '50vh' : '3rem')};
     position: fixed;
+    transition: all 0.3s linear;
     width: 100%;
     z-index: 10;
 
@@ -25,7 +26,7 @@ const Container = styled.div`
 `;
 
 const UnorderedList = styled.ul`
-    align-items: center;
+    align-items: ${(props) => (props.isSubMenuVisible ? 'top' : 'center')};
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -66,10 +67,15 @@ const ListElement = styled.li`
 
 const Navbar = () => {
 	const [isMobile, setIsMobile] = useState(true);
+	const [isSubMenuVisible, setIsSubMenuVisible] = useState(false);
+
+	useEffect(() => {
+		setIsMobile(window.innerWidth < 1024);
+	});
 
 	return (
-		<Container>
-			<UnorderedList>
+		<Container isSubMenuVisible={isSubMenuVisible}>
+			<UnorderedList isSubMenuVisible={isSubMenuVisible}>
 				<ListElement>
 					<Tooltip label="home">
 						<Meteor/>
@@ -78,7 +84,10 @@ const Navbar = () => {
 				{
 					isMobile ? (
 						<ListElement>
-							<Arrow/>
+							<Arrow
+								isSubMenuVisible={isSubMenuVisible}
+								onClick={() => setIsSubMenuVisible(!isSubMenuVisible)}
+							/>
 						</ListElement>
 					) : (
 						<ListElement>
