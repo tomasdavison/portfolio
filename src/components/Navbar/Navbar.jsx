@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import {
-	Meteor, Profile, LinkedIn, Arrow,
-} from '../../utils/Icons';
+	Meteor, Profile, LinkedIn, Book, Briefcase,
+} from '../../utils/Icons/Icons';
+import Arrow from '../../utils/Icons/AnimatedIcons';
 import Tooltip from '../Tooltip/Tooltip';
 
 const Container = styled.div`
@@ -134,9 +135,23 @@ const Navbar = () => {
 							</SubMenuUnorderedList>
 						</ListElement>
 					) : (
-						<ListElement>
-							<Profile/>
-						</ListElement>
+						<>
+							<ListElement>
+								<Tooltip label="Who am I?">
+									<Profile/>
+								</Tooltip>
+							</ListElement>
+							<ListElement>
+								<Tooltip label="Experience">
+									<Book/>
+								</Tooltip>
+							</ListElement>
+							<ListElement>
+								<Tooltip label="Projects">
+									<Briefcase/>
+								</Tooltip>
+							</ListElement>
+						</>
 					)
 				}
 

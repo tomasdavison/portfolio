@@ -15,22 +15,6 @@ const Icon = styled.span`
 	}
 `;
 
-const IconWithAnimation = styled.span`
-    border-radius: 50%;
-	color: white;
-	font-size: 1.5rem;
-	padding: 0.5rem;
-	transform: rotate(0deg);
-	transform: ${(props) => (props.isSubMenuVisible ? 'rotate(180deg)' : '')};
-	transition: all 0.5s ease;
-	z-index: 2;
-	
-	&:hover {
-		background: #535353;
-		transform: scale(1.1);
-	}
-`;
-
 export const Profile = ({ link }) => (
 	<a href={link}>
 		<Icon className="fas fa-user" />
@@ -49,6 +33,14 @@ export const LinkedIn = ({ link }) => (
 	</a>
 );
 
-export const Arrow = ({ onClick, isSubMenuVisible }) => (
-	<IconWithAnimation isSubMenuVisible={isSubMenuVisible} onClick={onClick} className="fas fa-chevron-up" />
+export const Book = ({ link }) => (
+	<a href={link}>
+		<Icon className="fas fa-book-open" />
+	</a>
+);
+
+export const Briefcase = ({ link }) => (
+	<a href={link}>
+		<Icon className="fas fa-briefcase" />
+	</a>
 );

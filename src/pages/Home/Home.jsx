@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Title from '../../components/Title/Title';
 import Button from '../../components/Button/Button';
-import { GitHub, Twitter } from '../../utils/MainIcons';
+import { GitHub, Twitter } from '../../utils/Icons/MainIcons';
 
 const Container = styled.div`
     background: #000;
